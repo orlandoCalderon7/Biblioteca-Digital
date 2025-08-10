@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Biblioteca Digital</h1>
+        <h2>Sistema de Gestión de Préstamos</h2>
+    </header>
+
+    <nav>
+        <ul>
+            <li id="nav-libros">📚 Libros</li>
+            <li id="nav-usuarios">👥 Usuarios</li>
+            <li id="nav-prestamos">🔄 Préstamos</li>
+            <li id="nav-estadisticas">📊 Estadísticas</li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Secciones que se cargarán dinámicamente -->
+        <section id="gestion-libros" class="seccion-activa">
+            <h2>Gestión de Libros</h2>
+            <div class="acciones">
+                <button id="nuevo-libro">+ Nuevo Libro</button>
+                <div class="busqueda">
+                    <input type="text" placeholder="Buscar libros por título o autor...">
+                    <button>Buscar</button>
+                </div>
+            </div>
+            <div id="listado-libros">
+                <!-- Aquí se cargarán los libros con javascript -->
+            </div>
+        </section>
+
+        <section id="gestion-usuarios" class="seccion-oculta">
+            <h2>Gestión de Usuarios</h2>
+            <div class="acciones">
+                <button id="nuevo-usuario">+ Nuevo Usuario</button>
+            </div>
+            <div id="listado-usuarios">
+                <!-- Aquí se cargarán los usuarios de la base de datos con javascript -->
+            </div>
+        </section>
+
+        <section id="gestion-prestamos" class="seccion-oculta">
+            <h2>Gestión de Préstamos</h2>
+            <div class="acciones">
+                <button id="nuevo-prestamo">+ Nuevo Préstamo</button>
+                <div class="filtros">
+                    <select>
+                        <option>Todos los estados</option>
+                        <option>Ver Vencidos</option>
+                    </select>
+                </div>
+            </div>
+            <div id="listado-prestamos">
+                <!-- Aquí se cargarán los libros prestados de la base de datos con javascript -->
+            </div>
+        </section>
+
+        <!-- CORRECCIÓN: Cambiado el ID a "gestion-estadisticas" para que coincida con el script -->
+        <section id="gestion-estadisticas" class="seccion-oculta">
+            <h2>Estadísticas de la Biblioteca</h2>
+            <div class="estadisticas-container">
+                <div class="estadistica">
+                    <h3>Total de Libros</h3>
+                    <p id="total-libros">0</p>
+                </div>
+                <div class="estadistica">
+                    <h3>Usuarios Registrados</h3>
+                    <p id="total-usuarios">0</p>
+                </div>
+                <div class="estadistica">
+                    <h3>Préstamos Activos</h3>
+                    <p id="prestamos-activos">0</p>
+                </div>
+                <div class="estadistica">
+                    <h3>Préstamos Vencidos</h3>
+                    <p id="prestamos-vencidos">0</p>
+                </div>
+            </div>
+            <div class="graficos">
+                <h3>Libros Más Prestados</h3>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
